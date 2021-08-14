@@ -516,9 +516,9 @@ img {
     top: 50%;
     transform: translate(-50%, -50%);
 
-    min-height: 528px;
-    width: 581px;
-    border: 1px solid #ffffff;
+    height: 581px;
+    width: 528px;
+    /* border: 1px solid #ffffff; */
     border-radius: 4px;
     background-color: #ffffff;
     padding: 40px;
@@ -536,29 +536,38 @@ img {
     background: local;
 }
 
+.close-icon{ 
+   color: rgba(0, 0, 0, 0.1);
+}
+
 /*------------------ форма заполнения ------------------*/
-.item-form {
+.title-form {
     font-size: 20px;
     font-weight: 700;
-    line-height: 1.15px;
+    line-height: 1.15;
     text-align: center;
 
     margin: 0px 0px 20px;
     padding: 0px; 
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-.person-icon{
-   
-    top: 14px;
-    left: 15px;
+.form{
 
 }
+
+.form-name {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.label-item{
+    font-size: 14px;
+    color: var(--title-text-color);
+    margin-bottom: 10px;
+}
+
 .user-name{
-  
     top: 0;
     left: 0;
     margin: 0px;
@@ -569,12 +578,18 @@ form {
     border-radius: 4px;
 }
 
-.close-icon{ 
-   color: rgba(0, 0, 0, 0.1);
+.person-icon{
+    top: 14px;
+    left: 15px;
+    position: absolute;
+}
+
+.form-phone{
+    position: relative;
 }
 
 
-.
+
 
 
 /* ==============================Футер логотип========================= */
@@ -730,7 +745,7 @@ form input.accede{
     margin-top: 20px;
 }
 
-form input  {
+.submit-input{
     height: 50px;
     width: 353px;
     margin-right: 12px;
@@ -740,7 +755,7 @@ form input  {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-form input[placeholder]{
+.submit-input[placeholder]{
     padding-left: 16px;
 
     font-size: 16px;
