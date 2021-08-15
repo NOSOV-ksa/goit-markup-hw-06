@@ -343,41 +343,77 @@
                         </svg>
                     <!-- </a>  -->
                 </button>
-<!------------------ форма заполнения ------------------>
-                <div class="title-form">Оставьте свои данные, мы вам перезвоним</div>
-                <form class="form">
-                    <div class="form-name">
-                        <label for="userName" class="label-item">Имя</label>
+                <!------------------ форма заполнения ------------------>
+                <fieldset>
+                    <legend class="title-form">Оставьте свои данные, мы вам перезвоним</legend>
+                    <form class="form-field">
+                        <div class="form-name">
+                            <label for="userName" class="label-item">Имя</label>
+                            <input
+                            type="text" 
+                            name="userName" 
+                            id="userName" 
+                            placeholder="" 
+                            class="user-data" 
+                            required>
+                            <svg class="person-icon" width="12" height="12">
+                                <use href="./images/sprite.svg#person"></use>
+                            </svg>
+                        </div>
+                    </form>
+                    <form class="form-field">
+                        <div class="form-name">
+                            <label for="userPhone" class="label-item">Телефон</label>
+                            <input
+                            type="tel" 
+                            name="userPhone" 
+                            id="userPhone" 
+                            placeholder="" 
+                            class="user-data" 
+                            required>
+                            <svg class="person-icon" width="13" height="13">
+                                <use href="./images/sprite.svg#phone"></use>
+                            </svg>
+                        </div>
+                    </form>
+                    <form class="form-field">
+                        <div class="form-name">
+                            <label for="userMail" class="label-item">Почта</label>
                         <input 
                         type="text" 
-                        name="" 
-                        id="userName" 
+                        name="userMail" 
+                        id="userMail" 
                         placeholder="" 
-                        class="user-name" 
+                        class="user-data" 
                         required>
-                        <svg class="person-icon" width="12" height="12">
-                            <use href="./images/sprite.svg#person"></use>
+                        <svg class="person-icon" width="15" height="12">
+                        <use href="./images/sprite.svg#email"></use>
                         </svg>
-                    </div>
-                    <div class="form-phone">
-                        <label for="userPhone" class="label-item">Имя</label>
-                        <input 
-                        type="tel" 
-                        name="" 
-                        id="userName" 
-                        placeholder="" 
-                        class="user-name" 
-                        required>
-                        <svg class="person-icon" width="12" height="12">
-                            <use href="./images/sprite.svg#phone"></use>
-                        </svg>
-                    </div>
-                    
-                    
+                        </div>
+                    </form>
+                    <form class="form-field comment">
+                        <div class="form-name">
+                            <label for="userComment" class="label-item">Комментарий</label>
+                            <textarea name="userComment" id="userComment" placeholder="Введите текст" rows="10" class="comment-area"></textarea>
+                        </div>
+                    </form>
+                </fieldset>
+                
+                <form class="checkbox-item">
+                    <label>
+                        <input type="checkbox" class="checkbox" name="agree" id="">
+                        <div class="checkbox-input"></div>
+                        <span class="checkbox-text">Соглашаюсь с рассылкой и принимаю </span>
+                        <a class="checkbox-link" href="">Условия договора</a>
+                    </label>
+                        
                 </form>
+                <button type="submit" class="button">Отправить</button>
+
+
+
 
             </div>
-
         </div>
         
     </main>

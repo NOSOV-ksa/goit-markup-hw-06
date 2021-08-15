@@ -226,6 +226,8 @@ img {
 .button {
     border: none;
     border-radius: 4px;
+    height: 50px;
+    width: 200px;
 
     background-color: var(--accent-color);
     color: var(--color-white);
@@ -235,7 +237,6 @@ img {
     line-height: 1.87;
     letter-spacing: 0.06em;
     text-align: center;
-    padding: 10px 32px;
     cursor: pointer;
 }  
 
@@ -493,7 +494,7 @@ img {
 }
 
 
-/* ==============================Модальное окно========================= */
+/* ====Модальное окно=====Модальное окно=====Модальное окно======Модальное окно===== */
 
 .backdrop {
     position: fixed;
@@ -516,6 +517,9 @@ img {
     top: 50%;
     transform: translate(-50%, -50%);
 
+    display: flex;
+    flex-direction: column;
+
     height: 581px;
     width: 528px;
     /* border: 1px solid #ffffff; */
@@ -529,15 +533,32 @@ img {
 
 .button-close {
     position: absolute;
-    fill: none;
     right: 8px;
     top: 8px;
-    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--color-social-network);
+    fill: #000;
     background: local;
+    
+    cursor: pointer;
+        
 }
 
-.close-icon{ 
-   color: rgba(0, 0, 0, 0.1);
+.close-icon{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    transform: translate(-50%, -50%);
+    fill: #000;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-icon:hover{
+    fill: var(--accent-color);
 }
 
 /*------------------ форма заполнения ------------------*/
@@ -547,27 +568,63 @@ img {
     line-height: 1.15;
     text-align: center;
 
-    margin: 0px 0px 20px;
+    margin: 0px 0px 12px;
     padding: 0px; 
 }
 
-.form{
+.form-field input {
+    padding-left: 42px;
+    color: #000;
+}
 
+.form-name:focus-within .user-data{
+   border-color: var(--accent-color);
+   color: var(--accent-color);
+}
+
+.user-data:focus-within + .person-icon{
+    fill: var(--accent-color);
+}
+
+.form-name:hover .label-item,
+.form-name:hover .user-data,
+.form-name:hover textarea{
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.form-name:hover .person-icon,
+.form-name:hover .person-icon{
+fill: var(--accent-color);
 }
 
 .form-name {
     display: flex;
     flex-direction: column;
     position: relative;
+
+    /* margin-bottom: 10px; */
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:not(:last-child){
+    margin-bottom: 10px;
 }
 
 .label-item{
     font-size: 14px;
     color: var(--title-text-color);
-    margin-bottom: 10px;
+    margin-bottom: 4px;
+
+    cursor: pointer;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.user-name{
+.user-data{
     top: 0;
     left: 0;
     margin: 0px;
@@ -576,22 +633,96 @@ img {
     height: 40px;
     border: 1px solid var(--color-social-network);
     border-radius: 4px;
+
+    cursor: pointer;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .person-icon{
-    top: 14px;
-    left: 15px;
+    left: 14px;
+    top: 60%;
     position: absolute;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-phone{
     position: relative;
 }
 
+.comment-area{
+    padding: 12px 16px;
+    font-size: 14px;
+    line-height: 1,14;
+    letter-spacing: 1px;
+    border: 1px solid rgba(33, 33, 33, 0.2); 
+    border-radius: 4px;
+
+    height: 120px;
+    width: 448px;
+    resize: none;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment-area::placeholder{
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.comment-area:hover{
+    cursor: pointer;
+    color: var(--accent-color);
+}
+
+fieldset{
+    border: none;
+    margin: 0px 0px 20px;
+    padding: 0px;
+}
+
+.checkbox-item{
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px 0px 30px;
+}
+
+.checkbox{
+    cursor: pointer;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.checkbox-text{
+    margin-left: 7px;
+    font-size: 14px;
+    line-height: 142%;
+    color: var(--title-text-color);
+}
+
+.checkbox-link{
+    margin-left: 7px;
+    font-size: 14px;
+    line-height: 142%;
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.modal .button {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translate(-50%, 0px);
+}
 
 
-
-
+/* ================================================================================================ */
 /* ==============================Футер логотип========================= */
 
 .footer {
