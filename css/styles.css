@@ -717,7 +717,7 @@ fieldset{
     height: 1.5em;
     cursor: pointer;
 
-    background-image: url(/images/off.svg);
+    background-image: url(../images/off.svg);
 }
 
 .check-input:checked + .check-box{
