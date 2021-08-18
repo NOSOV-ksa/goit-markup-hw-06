@@ -729,11 +729,11 @@ fieldset{
 }
 
 .check-input:focus + .check-box{
-    background-image: url(/images/off-focused.svg);
+    background-image: url(../images/off-focused.svg);
 }
 
 .check-input:focus:checked + .check-box{
-    background-image: url(/images/on-focused.svg);
+    background-image: url(../images/on-focused.svg);
 }
 
 
